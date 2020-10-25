@@ -17,3 +17,4 @@ tests/benchlib.o
 tests/SIZES.*
 tests/*.log
 /.project
+*.user
