@@ -193,17 +193,16 @@ SET (PTHREAD_SOURCES
 	w32_CancelableWait.c
 )
 
+SET (PTHREAD_HEADERS
+	_ptw32.h
+	pthread.h
+	sched.h
+)
+
 ADD_LIBRARY (pthreadVC SHARED
 	${PTHREAD_SOURCES}
 )
 
-SET (PTHREAD_HEADERS
-	config.h
-	implement.h
-	need_errno.h
-	pthread.h
-	semaphore.h
-)
 
 TARGET_INCLUDE_DIRECTORIES (pthreadVC
 	PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/pthread>
